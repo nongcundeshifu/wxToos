@@ -22,7 +22,7 @@
     "chai": "3.2.0",
     "contributors": "*",
     "eventproxy": "0.3.4",
-    "growl": "1.8.1",
+    "growl": "1.10.0",
     "istanbul": "*",
     "jade": "1.11.0",
     "mocha": "2.3.2",
