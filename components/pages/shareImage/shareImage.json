@@ -1,0 +1,5 @@
+{
+    "usingComponents": {
+        "shareImage": "/components/shareImage/shareImage"
+    }
+}

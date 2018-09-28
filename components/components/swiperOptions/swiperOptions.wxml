@@ -1,0 +1,48 @@
+<!--components/swiperOptions/swiperOptions.wxml-->
+
+<!-- 最好不要使用同一个字段表示数据，每个item的数据字段最好分开。  -->
+<!-- 这里不好写成组件，所以，作为一个代码的模板  -->
+
+<view class=''>
+    
+
+    <view class='tabList flex'>
+        <view bindtap='clickTab' data-current='0' class="{{currentTab==0?'active':''}}">提现记录</view>
+        <view bindtap='clickTab' data-current='0' class="{{currentTab==0?'active':''}}">提现记录</view>
+    </view>
+    
+    <swiper class="flex-1" bindchange='changItem' current='{{currentTab}}'>
+        <swiper-item>
+            <scroll-view scroll-y bindscrolltolower="scrollTolower">
+
+                
+                <block >
+                    <!-- //这里面是内容 -->
+                </block>
+
+            </scroll-view>
+        </swiper-item>
+
+        <swiper-item>
+            <scroll-view scroll-y bindscrolltolower="scrollTolower">
+                
+            </scroll-view>
+        </swiper-item>
+        
+        
+    </swiper>
+
+
+    
+
+    
+    
+
+    
+
+</view>
+
+
+
+
+

@@ -1,0 +1,8 @@
+<!--index.wxml-->
+
+<!--data-delta 仅在navigateBack时有效  -->
+<button bindtap="pageJump" data-type="navigateTo" data-url="/pages/luckyDrawResult/luckyDrawResult?prize_id={{prizeInfo.id}}" data-delta = '1'>测试</button>
+
+<button bindtap='getData'>
+    获取数据
+</button>

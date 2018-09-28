@@ -1,0 +1,44 @@
+<!--index.wxml-->
+
+<!-- enablePullDownRefresh 开启下拉刷新，不过，目前还是有问题，所以不推荐 -->
+<navigator-view id="navigator" isShowNavTap="{{false}}" enablePullDownRefresh="{{true}}">
+    <view  class='main'>
+        <navigator url='../testNavigator/testNavigator'>进入自定义导航栏</navigator>
+        <view style='background:red;' class='main'>这里是插入到组件slot name="before"中的内容</view>
+        <view style='background:red;' class='main'>这里是插入到组件slot name="before"中的内容</view>
+        <view style='background:red;' class='main'>这里是插入到组件slot name="before"中的内容</view>
+        <view style='background:red;' class='main'>这里是插入到组件slot name="before"中的内容</view>
+        <view style='background:red;' class='main'>这里是插入到组件slot name="before"中的内容</view>
+            这里是插入到组件slot name="before"中的内容
+        <view style='background:red;' class='main'>这里是插入到组件slot name="before"中的内容</view>
+        <view style='background:red;' class='main'>这里是插入到组件slot name="before"中的内容</view>
+        <view style='background:red;' class='main'>这里是插入到组件slot name="before"中的内容</view>
+        <view style='background:red;' class='main'>这里是插入到组件slot name="before"中的内容</view>
+        <view style='background:red;' class='main'>这里是插入到组件slot name="before"中的内容</view>
+            这里是插入到组件slot name="before"中的内容
+        <view style='background:red;' class='main'>这里是插入到组件slot name="before"中的内容</view>
+        <view style='background:red;' class='main'>这里是插入到组件slot name="before"中的内容</view>
+        <view style='background:red;' class='main'>这里是插入到组件slot name="before"中的内容</view>
+        <view style='background:red;' class='main'>这里是插入到组件slot name="before"中的内容</view>
+        <view style='background:red;' class='main'>这里是插入到组件slot name="before"中的内容</view>
+            这里是插入到组件slot name="before"中的内容
+        <view style='background:red;' class='main'>这里是插入到组件slot name="before"中的内容</view>
+        <view style='background:red;' class='main'>这里是插入到组件slot name="before"中的内容</view>
+        <view style='background:red;' class='main'>这里是插入到组件slot name="before"中的内容</view>
+        <view style='background:red;' class='main'>这里是插入到组件slot name="before"中的内容</view>
+        <view style='background:red;' class='main'>这里是插入到组件slot name="before"中的内容</view>
+            这里是插入到组件slot name="before"中的内容
+        <view style='background:red;' class='main'>这里是插入到组件slot name="before"中的内容</view>
+        <view style='background:red;' class='main'>这里是插入到组件slot name="before"中的内容</view>
+        <view style='background:red;' class='main'>这里是插入到组件slot name="before"中的内容</view>
+        <view style='background:red;' class='main'>这里是插入到组件slot name="before"中的内容</view>
+        <view style='background:red;' class='main'>这里是插入到组件slot name="before"中的内容</view>
+            这里是插入到组件slot name="before"中的内容
+        <view style='background:red;' class='main'>这里是插入到组件slot name="before"中的内容</view>
+        <view style='background:red;' class='main'>这里是插入到组件slot name="before"中的内容</view>
+        <view style='background:red;' class='main'>这里是插入到组件slot name="before"中的内容</view>
+        <view style='background:red;' class='main'>这里是插入到组件slot name="before"中的内容</view>
+        <view style='background:red;' class='main'>这里是插入到组件slot name="before"中的内容</view>
+    </view>
+    
+</navigator-view>

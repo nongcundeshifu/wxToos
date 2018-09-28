@@ -1,0 +1,21 @@
+@import "../../sass/_public";
+@import "../../sass/utils";
+@import "../../sass/iconfont/_iconfont.wxss";
+
+@import "../../sass/template/icon-text";
+
+open-button {
+    display: inline-block;
+    font-size: 0;
+    .open-button {
+        //font-size: #{$default-font};
+        color: #{$text-gray};
+    }
+}
+
+
+
+
+
+
+

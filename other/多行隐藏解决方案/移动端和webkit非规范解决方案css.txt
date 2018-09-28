@@ -1,0 +1,32 @@
+
+不过好像有bug。建议用插件
+
+// webkit浏览器和移动端解决方案
+@mixin  multiple-lines-ellipsis($line) {
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    // （非规范属性）
+    -webkit-line-clamp: #{$line};
+    -webkit-box-orient: vertical;
+}
+
+
+// webkit浏览器和移动端解决方案
+.multiple-lines-ellipsis-2{
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    // （非规范属性）
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.multiple-lines-ellipsis-3{
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    // （非规范属性）
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+

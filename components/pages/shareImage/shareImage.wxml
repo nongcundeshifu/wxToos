@@ -1,0 +1,4 @@
+<!--pages/shareImage/shareImage.wxml-->
+
+
+<shareImage id="share-image" pr_canvasData="{{canvasData}}"></shareImage>

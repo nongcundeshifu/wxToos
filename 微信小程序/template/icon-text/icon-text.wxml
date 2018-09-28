@@ -1,0 +1,27 @@
+
+<!-- 文本图标，图标+文本的模板 提供json数据格式-->
+<!--
+
+[
+
+    {
+        icon: 字体图标
+        text: 文本
+        css: css样式文本
+    }
+
+
+]
+
+
+
+-->
+
+<template name="icon-text">
+
+    <view wx:for="{{iconText}}" wx:key class="icon-text flex flex-middle {{item.class}}"
+            style="{{item.css}}">
+        <i class="iconfont {{item.icon}}"></i>
+        <text>{{item.text}}</text>
+    </view>
+</template>

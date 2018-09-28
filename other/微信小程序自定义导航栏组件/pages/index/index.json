@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "navigator-view": "/components/navigator/navigator"
+    },
+    "disableScroll": false,
+    "enablePullDownRefresh":true,
+    "backgroundTextStyle":"dark"
+}

@@ -1,0 +1,59 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.1.1",
+	"appid": "wxf3b725742db52437",
+	"projectname": "%E5%9C%B0%E5%9D%80%EF%BC%8C%E5%9B%BE%E7%89%87%E7%AD%89%E6%8E%88%E6%9D%83%E5%8A%9F%E8%83%BD",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 1,
+			"list": [
+				{
+					"id": -1,
+					"name": "index2",
+					"pathName": "pages/index2/index2",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "使用缓存的授权",
+					"pathName": "pages/index3/index3",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "使用缓存的授权测试",
+					"pathName": "pages/index4/index4",
+					"query": ""
+				}
+			]
+		}
+	}
+}

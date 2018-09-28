@@ -1,0 +1,18 @@
+<!--index.wxml-->
+ <loading id="loading" title="测试属性"></loading> 
+<tabbar pr_tabBar="{{tabBar}}" bindtabbarA="tabbarFn1" bindtabbarB="singleIconBar" bindtabbarC="singleIconBarHasPage" bindtabbarD="tabbarFn4">
+
+    <view slot="tabbar-page1">
+        
+        <dialog id="dialog" title="提示" text="这里是测试内容" bindconfirm="confirmCallback" bindcancel="cancelCallback"></dialog>
+
+        <button bindtap='showDialog'>弹出对话框</button>
+    </view>
+    <view slot="tabbar-page2">
+        第二个页面
+    </view>
+    <view slot="tabbar-page4">
+        <button>第三个页面</button>
+    </view>
+
+</tabbar>

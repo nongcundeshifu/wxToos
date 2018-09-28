@@ -1,0 +1,38 @@
+<!--components/coverDialog/coverDialog.wxml-->
+
+
+<!-- 
+
+  2.显示的函数
+    1.prame title 标题 默认为提示
+    2.prame text 内容 必填 
+  3.隐藏的函数
+  4.确认的回调
+  5.取消的回调
+  6.滚动失效
+
+ -->
+
+<view class="dialog dialog-mask" catchtouchmove="preventTap" hidden="{{hideDialog}}">
+
+    <view class="dialog-main">
+        <view class="title">
+            {{title}}
+        </view>
+        <view class="text">
+            {{text}}
+        </view>
+        <view class="border-bottom"></view>
+        <view class=" button-main">
+
+            <button open-type="{{confirmOpenType}}" class="confirm button flex-1" hover-class='button-hover' bindtap="confirmCallback">
+                {{confirmText || '确定'}}
+            </button>
+            <button open-type="{{cancelOpenType}}" class="cancel button flex-1 text-green" hover-class='button-hover' hidden="{{hideCancel}}" bindtap="cancelCallback">
+                {{cancelText || '取消'}}
+            </button>
+        </view>
+    </view>
+
+
+</view>

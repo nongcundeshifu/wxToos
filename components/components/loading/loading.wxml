@@ -1,0 +1,19 @@
+<!--components/loading/loading.wxml-->
+<!--模板用来复用代码片段，即wxml，多用于页面布局，组件用来复用一个功能，比如对话框  -->
+<!-- 加载中组件  -->
+<!-- 自定义组件的 wxml 节点结构在与数据结合之后，将被插入到引用位置内  -->
+
+
+<cover-view class="loading" hidden="{{hideLoad}}">
+		
+		<cover-view class="main">
+			
+		</cover-view>
+
+
+</cover-view>
+
+
+
+
+

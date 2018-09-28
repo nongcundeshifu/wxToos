@@ -1,0 +1,69 @@
+@import "../../sass/_public";
+@import "../../sass/utils";
+@import "../../sass/iconfont/_iconfont.wxss";
+.searchInput {
+    font-size: rpx(28);
+
+    >view {
+        padding: rpx(7) 0;
+        background: #f4f4f4;
+        color: #b2b2b2;
+        -webkit-border-radius: rpx(10);
+        -moz-border-radius: rpx(10);
+        border-radius: rpx(10);
+
+    }
+
+    button {
+        padding: 0;
+        border: 0;
+        line-height: 1;
+        padding: rpx(10) 0 rpx(10) rpx(20);
+        background: rgba(0, 0, 0, 0);
+        font-size: rpx(30);
+
+        &:after {
+            border: 0;
+        }
+    }
+
+    input {
+        width: 100%;
+        color: #000;
+    }
+
+    .clear-text {
+        font-size: rpx(40);
+        margin: 0 rpx(20);
+        &.hidden {
+            display: none;
+        }
+    }
+
+    .icon-sousuo {
+        margin: 0 rpx(10) 0 rpx(20);
+        font-size: 1em;
+    }
+
+
+}
+
+.history {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #666;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+
+    .history-item {
+        border-bottom: 1px solid #e0e0e0;
+        padding: rpx(20);
+    }
+    .iconfont:first-child {
+        margin-right: rpx(20);
+    }
+}
+
+

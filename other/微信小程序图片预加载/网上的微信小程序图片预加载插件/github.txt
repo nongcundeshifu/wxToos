@@ -1,0 +1,1 @@
+https://github.com/o2team/wxapp-img-loader

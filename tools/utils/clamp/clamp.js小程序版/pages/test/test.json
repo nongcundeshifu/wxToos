@@ -1,0 +1,5 @@
+{
+	"usingComponents": {
+		"clamp": "/components/clamp/clamp"
+	}
+}

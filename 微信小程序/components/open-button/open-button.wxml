@@ -1,0 +1,12 @@
+<!--components/open-button/open-button.wxml-->
+<!-- 这是一些开发功能的图标按钮，比如分享和点赞功能-->
+
+<import src="/template/icon-text/icon-text.wxml"></import>
+
+<view class="open-button" wx:if="{{type === 'collection'}}" catchtap="onCollectTap">
+    <template is="icon-text" data="{{iconText: collectIconText}}"></template>
+</view>
+<view class="open-button" wx:elif="{{type === 'share'}}" catchtap="onSahreTap">
+    <template is="icon-text" data="{{iconText: shareIconText}}"></template>
+</view>
+

@@ -1,0 +1,584 @@
+<templateSet group="wechatCode">
+  <template name="wx.startRecode" value="wx.startRecord({&#10;  success:res=&gt;{&#10;  &#10;  },&#10;  fail:res=&gt;{&#10;  &#10;  }&#10;})" description="开始录音" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.request" value="wx.request({&#10;    url:&quot;$offset$&quot;,&#10;    success:res=&gt;{&#10;        &#10;    }&#10;})" description="发起的是 HTTPS 请求。一个微信小程序，同时只能有5个网络请求连接。" toReformat="false" toShortenFQNames="true">
+    <variable name="offset" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.uploadFile" value="wx.uploadFile({&#10;    url: '$offset$', &#10;    filePath: '',&#10;    name: '', &#10;    success:res=&gt;{ &#10;    &#10;    }&#10;})" description="将本地资源上传到开发者服务器" toReformat="false" toShortenFQNames="true">
+    <variable name="offset" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.downloadFile" value="wx.downloadFile({&#10;  url: '$offset$', &#10;  success: res =&gt; {&#10;   &#10;  }&#10;});" description="下载文件资源到本地" toReformat="false" toShortenFQNames="true">
+    <variable name="offset" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.connectSocket" value="wx.connectSocket({&#10;  url: '$offset$'&#10;});" description="创建一个 WebSocket 连接；一个微信小程序同时只能有一个 WebSocket 连接，如果当前已存在一个 WebSocket 连接，会自动关闭该连接，并重新创建一个 WebSocket 连接" toReformat="false" toShortenFQNames="true">
+    <variable name="offset" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.onSocketOpen" value="wx.onSocketOpen(res =&gt; {&#10;&#10;})" description="监听WebSocket连接打开事件" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.onSocketError" value="wx.onSocketError(res=&gt;{&#10; &#10;})" description="监听WebSocket错误" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.sendSocketMessage" value="wx.sendSocketMessage({&#10;      data:'$offset$'&#10;})" description="通过 WebSocket 连接发送数据，需要先 wx.connectSocket，并在 wx.onSocketOpen 回调之后才能发送。" toReformat="false" toShortenFQNames="true">
+    <variable name="offset" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.onSocketMessage" value="wx.onSocketMessage(res =&gt; {&#10;  &#10;})" description="监听WebSocket接受到服务器的消息事件" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.closeSocket" value="wx.closeSocket();" description="关闭WebSocket连接。" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.onSocketClose" value="wx.onSocketClose(res =&gt; {&#10;&#10;})" description="监听WebSocket关闭" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.chooseImage" value="wx.chooseImage({ &#10;  success: res =&gt; { &#10;  &#10;  }&#10;});" description="从本地相册选择图片或使用相机拍照" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.previewImage" value="wx.previewImage({ &#10;  urls: [$offset$]&#10;})" description="预览图片" toReformat="false" toShortenFQNames="true">
+    <variable name="offset" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.getImageInfo" value=" wx.getImageInfo({&#10;      src:'$offset$'    &#10; });" description="获取图片信息" toReformat="false" toShortenFQNames="true">
+    <variable name="offset" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.stopRecord" value=" wx.stopRecord()" description="​ 主动调用停止录音" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.playVoice" value=" wx.playVoice({&#10;      filePath: '$offset$'&#10; })" description="开始播放语音，同时只允许一个语音文件正在播放，如果前一个语音文件还没播放完，将中断前一个语音播放" toReformat="false" toShortenFQNames="true">
+    <variable name="offset" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.pauseVoice" value="wx.pauseVoice()" description="暂停正在播放的语音" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.stopVoice" value="wx.stopVoice();" description="结束播放语音" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.getBackgroundAudioPlayerState" value="wx.getBackgroundAudioPlayerState({&#10;    success:res=&gt;{&#10;  &#10;    }&#10;});" description="获取音乐播放状态" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.playBackgroundAudio" value="wx.playBackgroundAudio({&#10;    dataUrl:&quot;$offset$&quot;&#10;})" description="播放音乐，同时只能有一首音乐正在播放" toReformat="false" toShortenFQNames="true">
+    <variable name="offset" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.pauseBackgroundAudio" value="wx.pauseBackgroundAudio()" description="暂停播放音乐" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.seekBackgroundAudio" value="wx.seekBackgroundAudio({&#10;    position: 0&#10;})" description="控制音乐播放进度" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.stopBackgroundAudio" value="wx.stopBackgroundAudio();" description="停止播放音乐" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.onBackgroundAudioPlay" value="wx.onBackgroundAudioPlay(()=&gt;{&#10;&#10;});" description="监听音乐播放" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.onBackgroundAudioPause" value="wx.onBackgroundAudioPause(()=&gt;{&#10;&#10;});" description="监听音乐暂停" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.onBackgroundAudioStop" value="wx.onBackgroundAudioStop(()=&gt;{&#10;&#10;});" description="监听音乐停止" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.saveFile" value="wx.saveFile({&#10;  tempFilePath: '$offset$',&#10;  success: res=&gt;{&#10;&#10;  }&#10;})" description="保存文件到本地" toReformat="false" toShortenFQNames="true">
+    <variable name="offset" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.getSavedFileList" value="wx.getSavedFileList({&#10;  success:res=&gt;{&#10;   &#10;  }&#10;});" description="获取本地已保存的文件列表" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.getSavedFileInfo" value="wx.getSavedFileInfo({&#10;  filePath: '$offset$', &#10;  success:res=&gt;{&#10;    &#10;  }&#10;});" description="获取本地文件的文件信息" toReformat="false" toShortenFQNames="true">
+    <variable name="offset" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.removeSavedFile" value="wx.removeSavedFile({&#10;    filePath: '$offset$'&#10;})" description="删除本地存储的文件" toReformat="false" toShortenFQNames="true">
+    <variable name="offset" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.createAudioContext" value="wx.createAudioContext(&quot;$offset$&quot;);" description="创建并返回 audio 上下文 audioContext 对象" toReformat="false" toShortenFQNames="true">
+    <variable name="offset" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.createVideoContext" value="wx.createVideoContext(&quot;$offset$&quot;);" description="创建并返回 video 上下文 videoContext 对象" toReformat="false" toShortenFQNames="true">
+    <variable name="offset" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.setStorage" value="wx.setStorage({&#10;  key:&quot;$offset$&quot;&#10;  data:&quot;&quot;&#10;});" description="将数据存储在本地缓存中指定的 key 中，会覆盖掉原来该 key 对应的内容，这是一个异步接口。" toReformat="false" toShortenFQNames="true">
+    <variable name="offset" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.setStorageSync" value="wx.setStorageSync('$offset$', '');" description="将 data 存储在本地缓存中指定的 key 中，会覆盖掉原来该 key 对应的内容，这是一个同步接口" toReformat="false" toShortenFQNames="true">
+    <variable name="offset" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.getStorage" value="wx.getStorage({&#10;  key: '$offset$',&#10;  success: res =&gt; {&#10;   &#10;  } &#10;});" description="从本地缓存中异步获取指定 key 对应的内容" toReformat="false" toShortenFQNames="true">
+    <variable name="offset" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.getStorageSync" value="wx.getStorageSync('$offset$');" description="从本地缓存中同步获取指定 key 对应的内容" toReformat="false" toShortenFQNames="true">
+    <variable name="offset" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.getStorageInfo" value="wx.getStorageInfo({&#10;  success: res=&gt;{&#10;&#10;  }&#10;})" description="异步获取当前storage的相关信息" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.getStorageInfoSync" value="wx.getStorageInfoSync()" description="同步获取当前storage的相关信息" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.removeStorage" value="wx.removeStorage({&#10;  key: '$offset$',&#10;  success: res =&gt; {&#10;   &#10;  } &#10;})" description="从本地缓存中异步移除指定 key" toReformat="false" toShortenFQNames="true">
+    <variable name="offset" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.removeStorageSync" value="wx.removeStorageSync()" description="从本地缓存中同步移除指定 key" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.clearStorage" value="wx.clearStorage()" description="清理本地数据缓存" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.clearStorageSync" value="wx.clearStorageSync()" description="同步清理本地数据缓存" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.getLocation" value="wx.getLocation({&#10;  success: res =&gt; {&#10;&#10;  }&#10;})" description="获取当前的地理位置、速度" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.chooseLocation" value="wx.chooseLocation({&#10;    success:res=&gt;{&#10;    &#10;    }&#10;})" description="打开地图选择位置" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.openLocation" value=" wx.openLocation({&#10;   &#10; })" description="使用微信内置地图查看位置" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.getNetworkType" value="wx.getNetworkType({&#10;  success:res =&gt; {&#10;   &#10;  }&#10;})" description="获取网络类型" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.getSystemInfo" value="wx.getSystemInfo({&#10;  success: res =&gt; {&#10; &#10;  }&#10;})" description="获取系统信息" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.getSystemInfoSync" value="wx.getSystemInfoSync({&#10;    success:res=&gt;{&#10;    &#10;    }&#10;})" description="获取系统信息同步接口" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.onAccelerometerChange" value="wx.onAccelerometerChange(res=&gt;{&#10; &#10;})" description="监听重力感应数据" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.onCompassChange" value="wx.onCompassChange(res =&gt; {&#10; &#10;});" description="监听罗盘数据，频率：5次/秒" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.makePhoneCall" value="wx.makePhoneCall({&#10;  phoneNumber: '$offset$' //仅为示例，并非真实的电话号码&#10;})" description="拨打电话" toReformat="false" toShortenFQNames="true">
+    <variable name="offset" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.showToast" value="wx.showToast({&#10;  title: '$offset$'&#10;&#10;})" description="显示消息提示框" toReformat="false" toShortenFQNames="true">
+    <variable name="offset" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.showModal" value="wx.showModal({&#10;  title: '$offset$',&#10;  content: '',&#10;  success: res=&gt;{&#10;    if (res.confirm) {&#10;    &#10;    }&#10;  }&#10;})" description="​显示模态弹窗" toReformat="false" toShortenFQNames="true">
+    <variable name="offset" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.showActionSheet" value="wx.showActionSheet({&#10;  itemList: [$offset$],&#10;  success:res =&gt; {&#10;    &#10;      &#10;    &#10;  }&#10;})" description="​显示操作菜单" toReformat="false" toShortenFQNames="true">
+    <variable name="offset" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.setNavigationBarTitle" value="wx.setNavigationBarTitle({&#10;  title: '$offset$'&#10;})" description="动态设置当前页面的标题" toReformat="false" toShortenFQNames="true">
+    <variable name="offset" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.showNavigationBarLoading" value="wx.showNavigationBarLoading()" description="在当前页面显示导航条加载动画" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.hideNavigationBarLoading" value="wx.hideNavigationBarLoading()&#10;" description="隐藏导航条加载动画" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.navigateTo" value="wx.navigateTo({&#10;  url: '$offset$'&#10;})" description="保留当前页面，跳转到应用内的某个页面" toReformat="false" toShortenFQNames="true">
+    <variable name="offset" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.redirectTo" value="wx.redirectTo({&#10;  url: '$offset$'&#10;})" description="关闭当前页面，跳转到应用内的某个页面" toReformat="false" toShortenFQNames="true">
+    <variable name="offset" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.navigateBack" value="wx.navigateBack()" description="关闭当前页面，返回上一页面或多级页面" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.createAnimation" value="wx.createAnimation({$offset$})" description="创建一个动画实例animation" toReformat="false" toShortenFQNames="true">
+    <variable name="offset" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.createContext" value="wx.createContext();" description="创建并返回绘图上下文context对象" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.drawCanvas" value="  wx.drawCanvas({&#10;      canvasId: '$offset$'&#10;   })" description="绘制canvas" toReformat="false" toShortenFQNames="true">
+    <variable name="offset" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.canvasToTempFilePath" value="wx.canvasToTempFilePath({&#10;    canvasId:'$offset$'&#10;})" description="把当前画布的内容导出生成图片，并返回文件路径" toReformat="false" toShortenFQNames="true">
+    <variable name="offset" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.hideKeyboard" value="wx.hideKeyboard();" description="收起键盘" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.stopPullDownRefresh" value="wx.stopPullDownRefresh()" description="停止当前页面下拉刷新" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.login" value="wx.login({$offset$})" description="调用接口获取登录凭证（code）进而换取用户登录态信息，包括用户的唯一标识（openid） 及本次登录的 会话密钥（session_key）。用户数据的加解密通讯需要依赖会话密钥完成。" toReformat="false" toShortenFQNames="true">
+    <variable name="offset" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.getUserInfo" value="wx.getUserInfo({&#10;    success:res=&gt;{&#10;    &#10;    }&#10;})" description="获取用户信息，需要先调用 wx.login 接口。" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="wx.requestPayment" value="wx.requestPayment({&#10;   'timeStamp': '',&#10;   'nonceStr': '',&#10;   'package': '',&#10;   'signType': 'MD5',&#10;   'paySign': '',&#10;   'success':res =&gt; {&#10;   },&#10;   'fail': res =&gt; {&#10;   }&#10;})" description="发起微信支付" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="JSX_HTML" value="true" />
+      <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+</templateSet>

@@ -1,0 +1,30 @@
+
+
+// 圆形的圆角
+@mixin circle-radius{
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+}
+
+// 圆角样式
+@mixin radius($radius){
+    -webkit-border-radius: #{$radius}rpx;
+    -moz-border-radius: #{$radius}rpx;
+    border-radius: #{$radius}rpx;
+}
+
+
+
+// webkit浏览器和移动端解决方案
+@mixin  multiple-lines-ellipsis($line) {
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    // （非规范属性）
+    -webkit-line-clamp: #{$line};
+    -webkit-box-orient: vertical;
+    word-break: break-all; /* 追加这一行代码 */
+}
+
+

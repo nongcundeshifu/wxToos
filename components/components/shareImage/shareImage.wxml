@@ -1,0 +1,14 @@
+<!--components/shareImage/shareImage.wxml-->
+<!-- <import src="/template/loading/loading.wxml"></import> -->
+
+<!-- <template is="loading" data="{{hideLoad,animationData,LoadactiveIndex}}"></template> -->
+<view >
+	<view class="share-image">
+		<canvas id="shareimage" class='canvas' canvas-id="shareimage" style="height: {{canvasHeight}}px;" >
+			<cover-view class="canvas-cover"  hidden="{{!hiddenCover}}"></cover-view>
+		</canvas>
+		<button class="save-image" bindtap="saveShareImage">保存图片</button>
+	</view>
+	
+	
+</view>

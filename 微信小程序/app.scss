@@ -1,0 +1,36 @@
+// sass.dart.js  14873行把 代码：if(C.b.cz(a,".css"))return!0 改为：
+// if(C.b.cz(a,".wxss") || C.b.cz(a,".css"))return!0
+// 那么，在@improt时，如果他遇到wxss或者css文件，那么直接编译成wxss的@improt或者css的@import
+@import "./sass/iconfont/_iconfont.wxss";
+@import "./sass/public";
+@import "./sass/utils";
+
+// 混入模板代码的样式
+@import "sass/template";
+
+// components 关于组件的一些样式
+
+
+// template 关于模板代码的一些样式
+
+
+// 组件样式的引入中，不能使用标签来设置样式。
+page {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+view {
+    // 这里有个问题啊。这样设置，对于flex可能会出现影响，导致行为不一致。
+    //overflow: visible;
+}
+
+// 微信小程序样式
+button {
+    line-height: 1.4;
+    &:after {
+        border: 0;
+    }
+}
+

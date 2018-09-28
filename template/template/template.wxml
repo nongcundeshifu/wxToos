@@ -1,0 +1,41 @@
+<!--template/template.wxml-->
+
+<!--模板用来复用代码片段，即wxml，多用于页面布局，组件用来复用一个功能，比如对话框  -->
+
+<!--模板拥有自己的作用域，只能使用 data 传入的数据以及模版定义文件中定义的 <wxs /> 模块,因为这里的模板类似于，把
+这个一块代码给单独插入到目标位置，所以，事件的绑定还是有效的。 -->
+<!--不过，功能不够强大,只能定义一些公共变量啥的  -->
+<wxs module="advertis"> 
+
+var some_msg = "hello world";
+
+module.exports = {
+    msg : some_msg,
+}
+</wxs>
+
+<!-- 使用：先使用import导入，然后<template is="loading" data="{{hideLoad}}"></template>  -->
+<template name="advertis">
+	<view class="advertis">
+    <!-- 如果是绑定事件，则只需要把要绑定的函数名称传递过去即可。  -->
+	    <view bindtap='{{tapFnName}}'>{{advertis.msg}}</view>
+	</view>
+</template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

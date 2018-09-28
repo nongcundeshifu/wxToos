@@ -1,0 +1,5 @@
+/* pages/searchTest/searchTest.wxss */
+
+.font-class i{
+	color: red;
+}

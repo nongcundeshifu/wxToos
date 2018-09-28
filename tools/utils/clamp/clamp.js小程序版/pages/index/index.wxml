@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+
+  <view class='ellipsis'>lamp(数字|字符串|’auto’)。这个选项控jfisjijdf制何时何地去限制文本元素。第一，当选项为数字的时候，则代表应该被显示的行数。第二，你可以使用代表 CSS的值（px,em）字符串来控制元素显示的高度。最后，你可以使用’auto’字符串。’auto’将会尝试铺满有效的空白区域并且自动的限制元素使其自适应。最后一个参数应该在元素为股东高度的时候被使用。</view>
+</view>

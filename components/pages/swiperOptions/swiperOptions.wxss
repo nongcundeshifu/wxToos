@@ -1,0 +1,32 @@
+/* pages/swiperOptions/swiperOptions.wxss */
+
+/*订单列表切换*/
+
+.tabList {
+    width: 100%;
+    justify-content: space-around;
+    color: #666;
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.tabList>view {
+    padding: 20rpx 40rpx;
+    text-align: center;
+    font-size: 30rpx;
+    color: #808080
+}
+
+.tabList>.on {
+    color: #8fee9d;
+}
+
+
+
+
+
+
+
+
+
+

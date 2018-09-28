@@ -1,0 +1,77 @@
+/* components/coverDialog/coverDialog.wxss */
+
+/*全局对话框样式*/
+
+/*page需要height为100%*/
+
+.dialog {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.dialog.dialog-mask {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.dialog-main {
+    background: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    text-align: center;
+}
+
+.dialog .title {
+    font-size: 40rpx;
+    color: #333;
+    margin-top: 40rpx;
+}
+
+.dialog .text {
+    color: #999;
+    font-size: 30rpx;
+    white-space: wrap;
+    margin: 20rpx 40rpx;
+}
+
+.dialog .border-bottom {
+    height: 1px;
+    width: 100%;
+    background: #ddd;
+}
+
+.dialog .button-main {
+    display: flex;
+    justify-content: center;
+}
+
+.dialog .button:after {
+    border: none;
+}
+
+.dialog .button {
+    padding: 10rpx 0;
+    background: #fff;
+    border-radius: 0;
+    flex: 1;
+}
+.dialog .button.button-hover {
+    background: #eee;
+}
+.dialog .confirm.button {
+    border-right: 1px solid #ddd;
+}
+
+.dialog .text-green {
+    color: green;
+}
+
+.dialog .button .hover {
+    background: rgba(0, 0, 0, 0.1);
+}

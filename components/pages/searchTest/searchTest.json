@@ -1,0 +1,6 @@
+{
+	"usingComponents": {
+        "search-scroll": "/components/searchScroll/searchScroll",
+        "spinner":"/components/spinner/spinner"
+    }
+}

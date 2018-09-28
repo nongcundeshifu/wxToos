@@ -1,0 +1,17 @@
+<!--components/spinner/spinner.wxml-->
+
+
+<!-- 这是一个数量选择器 -->
+
+
+<!-- number：数字键盘（无小数点）
+idcard：数字键盘（无小数点、有个 X 键）
+digit：数字键盘（有小数点） -->
+
+<!-- 问题：属性和data两种数据的合理使用。 -->
+
+<view class="spinner flex flex-middle my-class">
+	<i class="iconfont icon-wuuiconsuoxiao" bindtap="changeNum" data-type="reduce"></i>
+	<input type="number" name="spinner" value="{{spinnerValue}}" disabled="{{disabledInput}}"  bindblur="modelInput"></input>
+	<i class="iconfont icon-jia" bindtap="changeNum" data-type="add"></i>
+</view>

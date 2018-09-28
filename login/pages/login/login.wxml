@@ -1,0 +1,13 @@
+<!--pages/login/login.wxml-->
+
+
+<view>
+    
+    <view>
+        <view class='title'>小程序需要您的微信授权才能使用哦~</view>
+        <!-- 他的事件触发，如果未授权，那么会等待用户点击授权框的按钮后再执行  -->
+        <button open-type='getUserInfo' bindgetuserinfo='getUserInfo' >一键登陆</button>
+    </view>
+</view>
+
+

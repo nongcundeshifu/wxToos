@@ -1,0 +1,3 @@
+<!--index.wxml-->
+<import src="/template/template.wxml"></import>
+<template is="advertis" data="{{tapFnName}}"></template>

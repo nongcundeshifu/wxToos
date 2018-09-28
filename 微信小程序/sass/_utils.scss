@@ -1,0 +1,48 @@
+
+// 一些公共样式
+
+@import "./utils/_flex";
+
+
+
+/*文本隐藏  */
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+// webkit浏览器和移动端解决方案
+.multiple-lines-ellipsis-2{
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    // （非规范属性）
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+.multiple-lines-ellipsis-3{
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    // （非规范属性）
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+/*文本对齐  */
+.text-left {
+    text-align: left !important;
+}
+.text-right {
+    text-align: right !important;
+}
+
+/*滚动*/
+.scroll {
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+}
+
+
+

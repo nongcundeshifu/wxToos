@@ -1,0 +1,7 @@
+ColorTree
+IdeaVIM
+com.paperetto.dash
+com.wakatime.intellij.plugin
+Vue.js
+com.fedot.idea.requirejs
+io.j99.idea.vue

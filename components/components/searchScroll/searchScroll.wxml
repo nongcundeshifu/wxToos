@@ -1,0 +1,55 @@
+<!--components/searchScroll/searchScroll.wxml-->
+
+<!-- 带搜索的单个下拉分页滚动 -->
+<!-- 这里不好写成组件，所以，作为一个代码的模板  -->
+
+		
+		<!-- input获取焦点时，只是显示，不会进行接口调用搜索。 -->
+		<!-- 只有在input内容改变时，才会触发搜索 -->
+
+			<view>
+                <view class="search">
+			        <form>
+			            <view class="flex search_mask flex-middle" hidden="{{searchComponent.hideMask}}">
+			                <view class="flex flex-1 flex-middle input-container" bindtap="hideMask">
+			                    <text class="iconfont icon-sousuo"></text>
+			                    <text>输入发帖标题搜索</text>
+			                </view>
+			                
+			                <button class='search-button' plain="true" >搜索</button>
+			            </view>
+			            <view class="flex search_main flex-middle " >
+			                <view class="flex-1 input-container">
+			                    <text class="iconfont icon-sousuo"></text>
+			                    <input type="text" name="search" placeholder="搜索" confirm-type='search' bindconfirm='search' bindinput='modelInput' data-wx-model="searchComponent.hideMask" focus="{{searchComponent.searchInputFocus}}" />
+			                </view>
+			                <button class='cancel-button' plain="true" bindtap="showMask" >取消</button>
+			            </view>
+			        </form>
+			    </view>
+            
+	            <scroll-view scroll-y bindscrolltolower="" class="team_list  flex-1">
+	                
+	               
+	            </scroll-view>
+	        </view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

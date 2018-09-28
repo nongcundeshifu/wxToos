@@ -1,0 +1,7 @@
+<!--pages/sharePage/sharePage.wxml-->
+<view>
+    name:{{page}}
+</view>
+<view>
+    id:{{id}}
+</view>

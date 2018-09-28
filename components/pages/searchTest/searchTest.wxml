@@ -1,0 +1,20 @@
+<!--pages/searchTest/searchTest.wxml-->
+
+
+<search-scroll></search-scroll>
+
+
+<!-- 选择器组件 -->
+<!-- 
+defaultValue  初始的默认值
+bindchange  数值改变时，触发的事件
+step      每次点击时，值跳动的范围。默认为1
+disabledInput  是否关闭input的自定义输入功能。默认为true
+max ，min最大最小值
+
+
+my-class:定义外部样式类的一个属性.指定这个样式类对应的 class.
+ -->
+<spinner id="spinner" defaultValue="1" max="10" min="-10" bindchange="numChange" step="{{step}}" disabledInput="{{true}}" my-class="font-class"></spinner>
+<button bindtap="setStep">点击修改spinner的step,并获取其num值</button>
+

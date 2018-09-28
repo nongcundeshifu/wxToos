@@ -1,0 +1,30 @@
+<!--components/tabbar/tabbar.wxml-->
+<view class='tab-page flex flex-v'>
+    
+
+    <view class='flex-1 tabbar-page '  >
+
+        <view class='tabbar-page{{index+1}}' wx:if="{{tabBar.selectIndex == index && !item.disExistPage}}" wx:for="{{tabBar.list}}" wx:key>
+        	<slot name="tabbar-page{{index+1}}"></slot>
+        </view>
+
+
+
+    </view>
+
+
+    <!-- 一个容器中，包含这page的内容。  -->
+    <!-- <view slot="before">这里是插入到组件slot name="before"中的内容</view>  -->
+    <slot name="tab-page"></slot>
+
+    <!-- tabbar 底部导航  -->
+    <view class='tabbar flex flex-zero-shrink'>
+		<view class="tabbar-item flex flex-v flex-justify-center flex-middle flex-1" wx:for="{{tabBar.list}}" wx:key bindtap="{{item.disExistPage ? 'switchDisExistTab' :'switchTab'}}"  data-index="{{index}}" >
+			<image src="{{tabBar.selectIndex == index ? item.selectedIconPath:item.iconPath}}"  class="icon {{item.type == 'singleIcon' ? 'single-icon' : ''}}" ></image>
+			<view class="text" style="color:{{tabBar.selectIndex == index ? tabBar.selectedColor:tabBar.color}};">{{item.text}}</view>
+		</view>
+    </view>
+
+    
+
+</view>

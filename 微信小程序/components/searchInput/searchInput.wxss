@@ -1,0 +1,141 @@
+@charset "UTF-8";
+/* 定义一个返回rpx像素的函数*/
+@import "../../sass/iconfont/_iconfont.wxss";
+.flex {
+  display: flex;
+}
+
+.flex-v {
+  flex-direction: column;
+  width: 100%;
+}
+
+.flex-middle {
+  align-items: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+  width: 0;
+}
+
+.flex-v-1 {
+  flex: 1 1 0%;
+}
+
+.flex-zero-shrink {
+  flex-shrink: 0;
+}
+
+.flex-adapt {
+  flex: 1 0 auto;
+}
+
+.flex-justify-between {
+  justify-content: space-between;
+}
+
+.flex-justify-center {
+  justify-content: center;
+}
+
+.flex-justify-around {
+  justify-content: space-around;
+}
+
+/*文本隐藏  */
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.multiple-lines-ellipsis-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.multiple-lines-ellipsis-3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+/*文本对齐  */
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+/*滚动*/
+.scroll {
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+}
+
+.searchInput {
+  font-size: 28rpx;
+}
+.searchInput > view {
+  padding: 7rpx 0;
+  background: #f4f4f4;
+  color: #b2b2b2;
+  -webkit-border-radius: 10rpx;
+  -moz-border-radius: 10rpx;
+  border-radius: 10rpx;
+}
+.searchInput button {
+  padding: 0;
+  border: 0;
+  line-height: 1;
+  padding: 10rpx 0 10rpx 20rpx;
+  background: rgba(0, 0, 0, 0);
+  font-size: 30rpx;
+}
+.searchInput button:after {
+  border: 0;
+}
+.searchInput input {
+  width: 100%;
+  color: #000;
+}
+.searchInput .clear-text {
+  font-size: 40rpx;
+  margin: 0 20rpx;
+}
+.searchInput .clear-text.hidden {
+  display: none;
+}
+.searchInput .icon-sousuo {
+  margin: 0 10rpx 0 20rpx;
+  font-size: 1em;
+}
+
+.history {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #666;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.history .history-item {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 20rpx;
+}
+.history .iconfont:first-child {
+  margin-right: 20rpx;
+}

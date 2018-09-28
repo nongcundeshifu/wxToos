@@ -1,0 +1,27 @@
+<!--components/navigator/navigator.wxml-->
+
+<!--有的安卓，微信无法设置状态栏，也就是不需要设置状态栏  -->
+
+
+
+<view class="page {{enablePullDownRefresh ? 'refresh' : 'flex flex-v'}} " style="padding-top:{{enablePullDownRefresh ? (barHeight+navHeight) : '0'}}px;">
+    <!-- 胶囊上下留6px即可。即12rpx -->
+    <view class="navigate" style="background: {{initData.navBgColor }};padding-top: {{barHeight}}px;">
+        <!--ios 默认的胶囊小点是 32px高 而安卓是  36px高 -->
+        <view class=' flex flex-middle' style="background: {{initData.bgColor}};height: {{navHeight}}px">
+            <view class="both-sides flex flex-middle flex-1" style="color:{{initData.itemColor}};">
+                <view class="flex navTap flex-middle iconfont {{initData.icon_class}}" wx:if="{{isShowNavTap}}" bindtap="{{customTap?'customTap':(navTapType != 'navigateBackTap' ? 'switchTabTap' : 'navigateBackTap')}}"></view>
+                <!--副标题  -->
+                <text>{{initData.viceTitle}}</text>
+            </view>
+            <view class="title ellipsis" style="color: {{initData.TitleColor}};">{{initData.title}}</view>
+            <view class="both-sides flex-1"></view>
+        </view>
+
+
+
+
+    </view>
+    <slot></slot>
+    
+</view>

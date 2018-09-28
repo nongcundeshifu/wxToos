@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="clamp.js"></script>
+    <style>
+        p {
+            border: 1px solid red;
+            text-align: justify;
+        }
+
+    </style>
+    <script src="../../../../login/utils/login/login.js"></script>
+</head>
+<body>
+    <p class="test1">lamp(数字|字符串|’auto’)。这个选项控制何时何地去限制文本元素。第一，当选项为数字的时候，则代表应该被显示的行数。第二，你可以使用代表 CSS的值（px,em）字符串来控制元素显示的高度。最后，你可以使用’auto’字符串。’auto’将会尝试铺满有效的空白区域并且自动的限制元素使其自适应。最后一个参数应该在元素为股东高度的时候被使用。</p>
+    <p class="test2">lamp(数字|字符串|’auto’)。这个选项控制何时何地去限制文本元素。第一，当选项为数字的时候，则代表应该被显示的行数。第二，你可以使用代表 CSS的值（px,em）字符串来控制元素显示的高度。最后，你可以使用’auto’字符串。’auto’将会尝试铺满有效的空白区域并且自动的限制元素使其自适应。最后一个参数应该在元素为股东高度的时候被使用。</p>
+    <p class="test3">lamp(数字|字符串|’auto’)。这个选项控制何时何地去限制文本元素。第一，当选项为数字的时候，则代表应该被显示的行数。第二，你可以使用代表 CSS的值（px,em）字符串来控制元素显示的高度。最后，你可以使用’auto’字符串。’auto’将会尝试铺满有效的空白区域并且自动的限制元素使其自适应。最后一个参数应该在元素为股东高度的时候被使用。</p>
+
+
+</body>
+
+<script>
+    //Single line
+    // $clamp($('.test1').get(0), {clamp: 1, });
+
+    //Multi-line
+    // var result = $clamp($('.test2').get(0), {clamp: 3, useNativeClamp: false,animate: true,});
+    // console.log(result);
+
+    //Auto-clamp based on available height
+    var result2 = $clamp($('.test3').get(0), {clamp: 3, useNativeClamp: false, truncationChar: ' ', truncationHTML: '<i style="color:red;">更多更多更多更多</i>'});
+    console.log(result2);
+
+
+</script>
+</html>

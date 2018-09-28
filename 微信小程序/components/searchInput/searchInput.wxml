@@ -1,0 +1,36 @@
+<!--components/searchInput/searchInput.wxml-->
+
+
+<view>
+        <view class="flex flex-middle searchInput">
+
+            <view class="flex flex-1 flex-middle">
+                <i class="iconfont icon-sousuo" hidden="{{hideCloseBtn}}"></i>
+                <input type="text" name="keywords" class="flex-1"
+                       placeholder="请输入搜索内容" value="{{keywords}}" data-wx-model="keywords"
+                       focus="{{inputFocus}}" bindinput="modelInputApp" bindfocus="onFocus" onblur="onBlur"
+                       confirm-type="search" bindconfirm="onSearch"/>
+                <i class="iconfont icon-guanbi clear-text {{hideClearIcon ? 'hidden':''}}" bindtap="onClearText" ></i>
+
+            </view>
+            <button class="search " bindtap="onClose" hidden="{{hideCloseBtn || !openHistory}}">取消</button>
+        </view>
+
+
+    <view class="history scroll" hidden="{{hideHistory || !openHistory}}" style="top: {{historyTop}}px; height: {{historyHeight}}px;">
+        <view class="flex flex-middle history-item" data-keywords="搜索内容" bindtap="onHistorySearch">
+            <i class="iconfont icon-sousuo" ></i>
+            <text class="ellipsis flex-1">我是搜索记录</text>
+        </view>
+        <view class="flex flex-middle history-item">
+            <i class="iconfont icon-sousuo"></i>
+            <text class="ellipsis flex-1">我是搜索记录</text>
+        </view>
+        <view class="flex flex-middle history-item">
+            <i class="iconfont icon-sousuo"></i>
+            <text class="ellipsis flex-1">我是搜索记录</text>
+        </view>
+    </view>
+</view>
+
+

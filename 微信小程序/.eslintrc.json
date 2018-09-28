@@ -1,0 +1,16 @@
+{
+    "extends": "eslint-config-airbnb",
+    "globals": {
+        "wx":false,
+        "getApp":false,
+        "Page":false,
+        "App":false,
+        "e":false,
+        "getCurrentPages":false,
+        "Component":false,
+        "options":true
+    },
+    "rules": {
+
+    }
+}

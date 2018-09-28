@@ -1,0 +1,6 @@
+<!--index.wxml-->
+
+
+<button  bindtap="{{!openSetting? (isAddressScope ? 'chooseAddress': 'authorizeAddress') : ''}}"  open-type="{{openSetting ? 'openSetting':''}}" >
+    获取地址授权
+</button>

@@ -1,0 +1,6 @@
+<!--pages/test/test.wxml-->
+
+<view>
+	<clamp value='{{value}}' lines='2'></clamp>
+
+</view>

@@ -1,0 +1,2 @@
+<!--pages/extend/extend.wxml-->
+<painter customStyle='margin-left:40rpx' palette="{{paletteTemp}}" bindimgErr="onPainterErr" />

@@ -1,0 +1,53 @@
+
+直接使用<navigator-view id="navigator" isShowNavTap="{{false}}" enablePullDownRefresh="{{true}}"></navigator-view>
+然后可以添加一些属性以及绑定一些特定事件。
+这个组件中 里面添加一个唯一的子元素。表明插槽
+page.js中的data中的initData对象和app.js的globalData中的initData对象。他们都是定义一些导航栏中的属性
+默认值：{ navBgColor: "white", bgColor: "white", viceTitle: "", title: "小程序", icon_class: "icon-fanhui-copy", TitleColor: "#000", itemColor:"#000"}
+其中：viceTitle 返回按钮右侧的副标题  返回按钮的icontfont类icon_class 返回按钮以及副标题的颜色：itemColor
+page.js中可以覆盖app.js中的定义。
+
+// 返回按钮是否自定义事件
+customTap:{
+    type: Boolean,     
+    value: false     
+},
+// 是否具有返回按钮
+isShowNavTap:{
+    type:Boolean,
+    value:true
+},
+// 默认返回按钮事件类型：navigateBackTap 表示返回上一页，switchTabTap 表示回到tabbar
+navTapType:{
+    type:String,
+    value:"navigateBackTap"
+},
+// 是否开启下拉刷新：目前功能有问题，推荐不用。而且，设置了这个属性时，还需要在这个页面的样式中，设置page为auto。不能限制page的高度
+enablePullDownRefresh:{
+    type:Boolean,
+    value:false
+}
+
+setInitData 获取本页面的组件对象，并调用此方法设置数据，具体和上面的默认对象一致。
+bind:navTap="bindNavTap"  自定义返回函数。bindNavTap为本页自定义的函数。并且要先customTap为true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

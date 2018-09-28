@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "loading": "/components/loading/loading",
+        "dialog":"/components/coverDialog/coverDialog",
+        "tabbar":"/components/tabbar/tabbar",
+        "shareImage":"/components/shareImage/shareImage"
+
+    }
+}

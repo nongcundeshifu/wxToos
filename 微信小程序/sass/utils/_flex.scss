@@ -1,0 +1,39 @@
+//弹性盒子
+
+.flex {
+    display: flex;
+}
+
+.flex-v {
+    flex-direction: column;
+    width: 100%;
+}
+
+.flex-middle {
+    align-items: center;
+}
+.flex-wrap {
+    flex-wrap:wrap;
+}
+.flex-1 {
+    flex: 1 1 0%;
+    width:0;
+}
+.flex-v-1 {
+    flex:1 1 0%;
+}
+.flex-zero-shrink {
+    flex-shrink:0;
+}
+.flex-adapt {
+    flex:1 0 auto;
+}
+.flex-justify-between {
+    justify-content: space-between;
+}
+.flex-justify-center {
+    justify-content: center;
+}
+.flex-justify-around{
+    justify-content: space-around;
+}

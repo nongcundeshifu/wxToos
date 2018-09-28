@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view>
+    <button bindtap="tap">切换</button>
+    <view >
+         <image wx:for="{{test ? image1 : image2}}" src="{{item}}" wx:key mode='aspectFit' bindload="loadOk"></image> 
+    </view>
+    <!-- <view wx:else>
+        <image wx:for="{{image2}}" src="{{item}}" wx:key mode='aspectFit'></image>
+    </view> -->
+
+
+</view>
+
+<view class='loadImage'>
+<!--如果要遍历对象，应该设置他的index来获取  -->
+    <image wx:for="{{loadImage}}"  wx:key src="{{index}}"  data-src="{{index}}" bindload="loadImageOk"></image>
+</view>

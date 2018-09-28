@@ -1,0 +1,32 @@
+
+// 一些公共样式
+
+@import "./utils/_flex";
+
+page {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: $font-med;
+}
+
+/*文本隐藏  */
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/*文本对齐  */
+.text-left {
+    text-align: left !important;
+}
+.text-right {
+    text-align: right !important;
+}
+
+/*滚动*/
+.scroll {
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+}
