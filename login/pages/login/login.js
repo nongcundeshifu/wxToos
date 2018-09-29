@@ -16,24 +16,7 @@ Page({
     onLoad: function (options) {
 
 
-        // 解析参数地址地址
-        //  - 代表是 &
-        // ： 代表 =
-        //  #  代表是 ？
-        // 或者 , 用来代码&也可以
-        // 注意：后面改版：使用base64来进行编码即可。
-        // 比如 /pages/index/index#id:1-name:zhou   等价于
-        // /pages/index/index?id=1&name=zhou
-
-        console.log(login.enCodeWxUrl("/pages/index/index?id=1&name=zhou"));
-        // console.log(this.deCodeWxUrl("/pages/index/index#id:1-name:zhou"));
-        console.log(login.deCodeWxUrl(login.enCodeWxUrl("/pages/index/index?id=1&name=zhou")));
-
-        console.log(login.getUrlWithArgs("/pages/index/index",{
-            id:1,
-            name:"zhou"
-        }));
-        console.log(login.getUrlWithArgs("/pages/index/index"));
+        
 
         let route = options.route;
         if(route) {
