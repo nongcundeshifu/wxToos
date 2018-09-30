@@ -4,13 +4,12 @@ App({
 
     },
     onLaunch: function () {
-        
+
         // 是否应该在app中执行一次和判断一次是否登陆。
         // 是：需要解决第一次时，app中和其他页面都需要userinfo的情况。此时，可能重复跳转。
             // 使用字段来记录并只跳转一次。
         // 否：需要在index和可能的分享页面中手动调用userinfo(可能的页面入口)，强制授权。并且，所有需要userinfo的情况下，需要嵌套在userinfo的回调中。
         // 选择第二种。
-        
     },
 
     // 在可能的app入口手动调用userinfo，以确保授权。
@@ -34,11 +33,11 @@ App({
                     })
                 } else {
                     // 此处只有在打开分享页面时，才会未授权用户信息。因为如果直接进入app那么未授权时，一定是跳转到授权页面的。
-                    
+
                     // // 此处的问题： 直接跳转到授权页面，那如果时分享时进入的页面，需要获取用户信息，那么应该授权后再调回那个分享页面，而不是首页才对。
-                   
+
                     //    self.data.isRedirectLogin 是否已经跳转过一次login页面。options.isRedirectLogin ： 强制跳转login页面。
-                    
+
                     if (options.route) {
                         // route具体看login页面格式。
                         wx.redirectTo({
@@ -60,13 +59,13 @@ App({
 
     // 需要在app中调用
     /*
-    options : 
+    options :
         isRedirectLogin:是否强制跳转login页面 默认：false
         route:登陆成功是的页面路由 默认：false
         isSwitchTab：是否是switchTab跳转。
 
 
-    
+
     */
     getUserInfo2: function (cb, opt) {
         console.log("登录用户信息");
@@ -85,7 +84,7 @@ App({
                         },
                         fail: err => {
                             console.log("授权失败");
-                        
+
                         }
                     })
                 } else {
